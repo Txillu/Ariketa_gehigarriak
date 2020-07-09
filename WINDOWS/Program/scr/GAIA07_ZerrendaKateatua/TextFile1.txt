@@ -1,0 +1,126 @@
+---------------ZERRENDA OSOA HUSTU-----------------
+
+void hustuZerrenda(PNODO_PELIKULA* ppBurua, int edukia) {
+	PNODO_PELIKULA aux,tmp;
+	aux = *ppBurua;
+	if (aux != NULL) {
+		while (aux != NULL) {
+			tmp = aux;
+			aux = aux->ptrHurrengoa;
+			//////////////////////////////
+			
+			free(tmp);
+		}
+		*ppBurua = NULL;
+	}
+
+}
+
+-----------------BISTARATU DANAK---------
+
+void hustuZerrenda(PNODO_PELIKULA* ppBurua, int edukia) {
+	PNODO_PELIKULA aux,tmp;
+	aux = *ppBurua;
+	if (aux != NULL) {
+		while (aux != NULL) {
+			tmp = aux;
+			aux = aux->ptrHurrengoa;
+			//////////////////////////////
+			
+			free(tmp);
+		}
+		*ppBurua = NULL;
+	}
+
+}
+
+------------ ORDENAR HAUTA---------------
+
+void ordenar1(NODO* head) {
+	NODO* minimo, * cursor1, * cursor2;
+		if (head != NULL) {
+			cursor1 = head;
+			while (cursor1->ss != NULL) {
+				minimo = cursor1;
+				cursor2 = cursor1->ss;
+				while (cursor2 != NULL) {
+					if (minimo->valor > cursor2->valor) {
+						minimo = cursor2;
+					}
+					cursor2 = cursor2->ss;
+				}
+				int temp = minimo->valor;
+				minimo->valor = cursor1->valor;
+				cursor1->valor = temp;
+				cursor1 = cursor1->ss;
+			}
+		}
+}
+
+-------------ORDENAR BUR-------------
+
+void ordenar2(NODO* head) {
+	int desordenada = 1;
+	NODO* cursor, * aux;
+	while (desordenada) {
+		desordenada = 0;
+		cursor = head;
+		while (cursor->ss != NULL) {
+			aux = cursor->ss;
+			if (cursor->valor > aux->valor) {
+				int temp = aux->valor;
+				aux->valor = cursor->valor;
+				cursor->valor = temp;
+				desordenada = 1;
+			}
+			cursor = cursor->ss;
+		}
+	}
+
+}
+
+--------------SARTU ORDENATUTA---------------
+
+void addOrder(NODO** phead, int valor) {
+	NODO* aux, * cursor;
+
+	aux = (NODO*)malloc(sizeof(NODO));
+	aux->valor = valor;
+
+
+	if (*phead == NULL) {
+		*phead = aux;
+		aux->ss = NULL;
+	}
+	else {
+		if ((*phead)->valor > valor) {
+			aux->ss = *phead;
+			*phead = aux;
+		}
+		else {
+			cursor = *phead;
+			while (cursor->ss != NULL && cursor->ss->valor < valor) {
+				cursor = cursor->ss;
+			}
+			aux->ss = cursor->ss;
+			cursor->ss = aux;
+		}
+	}
+
+}
+
+--------------------BILATU------------
+
+NODO* buscar(NODO* head, int valor) {
+	NODO* cursor;
+	cursor = head;
+
+	while (cursor != NULL && cursor->valor != valor) {
+		cursor = cursor->ss;
+	}
+
+	return cursor;
+
+}
+
+---------------
