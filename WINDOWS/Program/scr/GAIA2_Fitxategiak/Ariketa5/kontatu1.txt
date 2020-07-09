@@ -1,0 +1,1 @@
+Fitxategi hau testu honen tamaina kalkulatzeko erabiliko da, lehenengo .txt hau tamaina erdikoa izango da, bigarrena handia eta azkena motza.

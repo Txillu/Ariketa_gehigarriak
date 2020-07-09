@@ -1,0 +1,10 @@
+1	prueba	x	 otsaileko lehenego nota 1.000000
+			 otsaileko bigarren nota 1.000000
+			 ekaineko lehenego nota 1.000000
+			 ekaineko lehenego nota 1.000000
+			 finala 1.000000
+1	a	x	 otsaileko lehenego nota 2.000000
+			 otsaileko bigarren nota 2.000000
+			 ekaineko lehenego nota 2.000000
+			 ekaineko lehenego nota 2.000000
+			 finala 2.000000

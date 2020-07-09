@@ -1,0 +1,12 @@
+1 Enaitz Ezpeleta 18 Elgeta
+2 Joseba Agirre 22 Arrasate
+3 Pedro Arrieta 80 Aretxabaleta
+4 Enaitz Ezpeleta 18 Elgeta
+5 PJoseba Agirre 75 Arrasate
+6 PPedro Arrieta 85 Aretxabaleta
+7 PEnaitz Ezpeleta 67 Elgeta
+8 PJoseba Agirre 22 Arrasate
+9 PPedro Arrieta 70 Aretxabaleta
+10 PEnaitz Ezpeleta 31 Elgeta
+11 PJoseba Agirre 22 Arrasate
+12 PPedro Arrieta 65 Aretxabaleta
