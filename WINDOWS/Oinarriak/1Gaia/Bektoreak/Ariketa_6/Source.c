@@ -7,6 +7,8 @@ int atzetikKonprobatu(int konprobatuBeharrekoa, int bektorea[], int hasiera, int
 int main() {
 
 	int bektorea[128], zenbakia, kont = 0;
+	int i = 0, errepikatuta = 0, aurkituta = 0;
+
 	char str[128];
 
 	printf("Eman zenbaki bat lerroko (0 amaitzeko): \n");
@@ -19,24 +21,17 @@ int main() {
 			bektorea[kont] = zenbakia;
 			kont++;
 		}
+		while ( i < kont&&aurkituta==0) {
+			if (bektorea[i] == zenbakia) {
+				errepikatuta++;
+				aurkituta = 1;
+			}
+			i++;
+		}
 
+		aurkituta = 0;
 	} while (zenbakia != 0);
 	
-	int i, j, errepikatuta = 0,konprobatuBeharrekoa,aurretik,atzetik;
-
-	for (i = 0; i < kont; i++) {
-		konprobatuBeharrekoa = bektorea[i];
-		aurretik = aurretikKonprobatu(konprobatuBeharrekoa, bektorea,i);
-		if (aurretik == 0) {
-			atzetik = atzetikKonprobatu(konprobatuBeharrekoa, bektorea, i, kont);
-			if (atzetik == 1) {
-				errepikatuta++;
-			}
-		}
-		if (aurretik == 1) {
-			errepikatuta++;
-		}
-	}
 	
 	printf("%i zenbaki daude errepikatuta", errepikatuta);
 
